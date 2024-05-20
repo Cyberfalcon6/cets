@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#e9760">
     <title>C.E.T.S - Collaborative Education and Training Services</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
     let speed = 60;
     function typeWriter() {
@@ -85,9 +84,22 @@ function auto_scroll()
         * {
             margin: 0;
             padding: 0;
+            background: transparent;
             box-sizing: border-box;
         }
 
+        i 
+        {
+            align-self: center;
+            font-size: 60px;
+            color: #192136;
+            /* border: 7px solid #e9760b; */
+            border-radius: 50%;
+            border-top-right-radius: 35px;
+            border-bottom-left-radius: 35px;
+            border-style: groove;
+            padding: 25px;
+        }
         
         @font-face {
             font-family: cets;
@@ -96,6 +108,7 @@ function auto_scroll()
         
         body {
             font-family: Arial, sans-serif;
+            background-image: linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d);
         }
         
         header {
@@ -107,7 +120,7 @@ function auto_scroll()
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: #fdf5f0;
             color: rgb(42, 42, 42);
             margin-top: 0px;
             z-index: 1000;
@@ -121,7 +134,7 @@ function auto_scroll()
         .gradient {
             
             background-color: #231717;
-            background-image: linear-gradient(to bottom right, #231717, #c36314, #e9760b, #ffaf2c, #f4e3ab);
+            background-image: linear-gradient(to bottom right, #e9760b16, #e9760b40);
         }
         nav ul {
             list-style-type: none;
@@ -147,7 +160,7 @@ function auto_scroll()
             align-items: center;
             overflow: scroll;
             margin: 20px;
-            /* border: 1px solid #f4c79d82; */
+            /* border: 1px solid #ffff82; */
             border-radius: 20px;
         }
         .contact {
@@ -161,7 +174,7 @@ function auto_scroll()
             align-items: center;
             line-height: 150%;
             margin: 20px;
-            /* border: 1px solid #f4c79d82; */
+            /* border: 1px solid #ffff82; */
             border-radius: 20px;
         }
         .about{
@@ -176,7 +189,7 @@ function auto_scroll()
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             align-items: center;
             margin: 20px;
-            /* border: 1px solid #f4c79d82; */
+            /* border: 1px solid #ffff82; */
             border-radius: 20px;
         }
         #services-shell
@@ -188,7 +201,7 @@ function auto_scroll()
             overflow: hidden;
             align-items: center;
             margin: 20px;
-            /* border: 1px solid #f4c79d82; */
+            /* border: 1px solid #ffff82; */
             border-radius: 20px;
             width: 100%;
         }
@@ -204,10 +217,11 @@ function auto_scroll()
             flex-direction: column;
             justify-content: flex-start;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            /* border-right: 1px solid #f4c79d; */
+            /* border-right: 1px solid #ffe2c6; */
             overflow: hidden;
+            overflow-y: scroll;
             line-height: 150%;
-            border-right:2px solid #f4c79d;
+            border-right:2px solid #ffe2c6;
             width: 360px;
             color: white;
             min-width: 360px;
@@ -216,8 +230,12 @@ function auto_scroll()
             color: #000000;
             padding: 25px;
             transition: all .5s ease-in-out;
-            /* box-shadow: 2px 2px 15px #f4c79d; */
+            /* box-shadow: 2px 2px 15px #ffe2c6; */
             
+        }
+        .service::-webkit-scrollbar 
+        {
+            display: none;
         }
         .service img {
             max-width: 100%;
@@ -246,8 +264,8 @@ function auto_scroll()
         .cta-button,
         .nav-button:hover {
             padding: 10px 20px;
-            background-color: #c36314;
-            color: #f4c79d;
+            background-color: #e9760b;
+            color: #fff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -267,7 +285,7 @@ function auto_scroll()
             background-image: url("hero_3.jpg"); 
             background-position: center;
             background-blend-mode: multiply;
-            color: #f4c79d;
+            color: #ffe2c6;
             background-repeat: no-repeat;
             background-size: cover;
             transition: all 3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -277,17 +295,16 @@ function auto_scroll()
         {
             padding: 10px;
             border-radius: 10px;
-            background-color: #e9760b;
-            color: #fff;
-            display: inline;
+            background-color: #192136;
+            color: #ffe2c6;
             font-weight: 600;
             word-wrap: normal;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-shadow: 1px 1px 15px 1px  #f4c79d;
+            box-shadow: 1px 1px 15px 1px  #ffe2c6;
         }
         .about {
             padding: 50px 20px;
-            background-color: #fff;
+            background: transparent;
         }
 
         .about h2 {
@@ -307,11 +324,11 @@ function auto_scroll()
         
         .logo
         {
-            background-color: #e9760b;
-            color: #fff;
-            border: 2px solid #e9760b;
+            background-color: #ffffff;
+            color: #e9760b;
+            border: 5px solid #e9760b;
             border-radius: 10px;
-            padding: 5px;
+            padding: 10px;
             font-weight: 800;
             font-family: cets;
             font-size: 50px;
@@ -331,7 +348,7 @@ function auto_scroll()
         
         footer {
             background-color: #333;
-            color: #f4c79d;
+            color: #ffe2c6;
             padding: 20px;
             text-align: center;
         }
@@ -342,7 +359,7 @@ function auto_scroll()
         }
 
         footer nav ul li a {
-            color: #f4c79d;
+            color: #ffe2c6;
         }
 
         .title 
@@ -367,12 +384,18 @@ function auto_scroll()
         {
             right: 6px;
         }
+
+        .illustration 
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            align-items: center;
+            line-height: 200%;
+        }
         
         @media (max-width: 768px) {
-
-            nav 
-            {
-                display: none;
             
         }
     </style>
@@ -400,8 +423,8 @@ function auto_scroll()
     <section class="hero" id="hero">
         
         <div id="showcase">
-            <h1 style="font-size: 60px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to C.E.T.S</h1>
-       <br><br> <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <div id="roles"></div> </p>
+            <h1 style="color: #ffe2c6;font-size: 60px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to C.E.T.S</h1>
+       <br><br> <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <span id="roles"></span> </p>
         
         </div>
         <div><a href="#services" class="cta-button">Explore Our Services</a></div>
@@ -425,18 +448,21 @@ function auto_scroll()
             </div>
             
             <div class="service">
-                <img width="70px" src="hero_1.jpg" alt="Training Programs">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <img width="70px" src="business_training.jpg" alt="Training Programs">
                 <h3>Comprehensive Training Programs</h3> <br>
                 <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
             </div>
             
             <div class="service">
+                <i class="fas fa-briefcase"></i>
                 <img width="70px" src="hero_1.jpg" alt="Professional Development Workshops">
                 <h3>Professional Development Workshops</h3> <br>
                 <p>We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries. These workshops cover topics such as leadership development, communication skills, and project management, among others.</p>
             </div>
             
             <div class="service">
+                <i class="fas fa-comments"></i>
                 <img width="70px" src="hero_2.jpg" alt="Consultation Services">
                 <h3>Consultation Services</h3> <br>
                 <p>We provide consultation services to organizations seeking guidance on educational and training initiatives. This may include needs assessment, curriculum development, program evaluation, and strategic planning to help organizations optimize their learning and development efforts.</p>
@@ -465,6 +491,18 @@ function auto_scroll()
     </div>
     <div style="display: block;text-align: center;"><a href="services.html" class="cta-button">More Services</a></div> <br><br>
     <div class="connector"></div>
+
+
+    <div class="illustration">
+        <!-- <i class="fas fa-chalkboard-teacher"></i> -->
+        <img width="500px" src="business.svg" alt="Training Programs">
+        <div class="description">
+            <h3>Comprehensive Training Programs</h3> <br>
+        <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
+        </div>
+    </div>
+
+
     <h2 class="title">About Us</h2>
     <section id="about" class="about">
         <p>Collaborative Education and Training Services (C.E.T.S.) is dedicated to enhancing educational and training opportunities for professionals and organizations worldwide. With a focus on custom learning experiences, we empower individuals and teams to achieve their full potential.</p>
