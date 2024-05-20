@@ -122,7 +122,7 @@ function auto_scroll()
             padding: 20px;
             background-color: #fdf5f0;
             color: rgb(42, 42, 42);
-            margin-top: 0px;
+            margin: 0px;
             z-index: 1000;
         }
 
@@ -396,6 +396,35 @@ function auto_scroll()
         }
         
         @media (max-width: 768px) {
+
+            nav 
+            {
+                display: none;
+
+            }
+            .about 
+            {
+                flex-direction: column;
+                line-height: 180%;
+            }
+            #roles 
+            {
+                position: relative;
+                top: 20px;
+                line-break: strict;
+                width: fit-content;
+                align-self: center;
+            }
+            #welcome 
+            {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            .illustration
+            {
+                flex-direction: column;
+            }
             
         }
     </style>
@@ -424,7 +453,7 @@ function auto_scroll()
         
         <div id="showcase">
             <h1 style="color: #ffe2c6;font-size: 60px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to C.E.T.S</h1>
-       <br><br> <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <span id="roles"></span> </p>
+       <br><br> <p id="welcome" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <span id="roles"></span> </p>
         
         </div>
         <div><a href="#services" class="cta-button">Explore Our Services</a></div>
