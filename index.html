@@ -52,6 +52,30 @@ function changeBackground() {
     }, 8000);
 }
 
+function slide_left()
+{
+    document.getElementById("services").scrollLeft -= 375;
+}
+function slide_right()
+{
+    document.getElementById("services").scrollLeft += 375;
+}
+
+function auto_scroll()
+{
+    let scrolLeft = 1;
+    setInterval(() =>
+    {
+        slide_right();
+        if(scrolLeft==document.getElementById("services").scrollLeft)
+        {
+            document.getElementById("services").scrollLeft = 0;
+
+        }
+        scrolLeft = document.getElementById("services").scrollLeft
+
+    }, 7000);
+}
 
 
     </script>
@@ -62,13 +86,21 @@ function changeBackground() {
             padding: 0;
             box-sizing: border-box;
         }
+
+        
+        @font-face {
+            font-family: cets;
+            src: url("Potra.otf");
+        }
         
         body {
             font-family: Arial, sans-serif;
         }
         
         header {
-            position: relative;
+            position: fixed;
+            top: 0px;
+            width: 100%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
@@ -77,6 +109,7 @@ function changeBackground() {
             background-color: #ffffff;
             color: rgb(42, 42, 42);
             margin-top: 0px;
+            z-index: 1000;
         }
 
         header .nav-button 
@@ -87,7 +120,6 @@ function changeBackground() {
         .gradient {
             
             background-color: #231717;
-            
             background-image: linear-gradient(to bottom right, #231717, #c36314, #e9760b, #ffaf2c, #f4e3ab);
         }
         nav ul {
@@ -101,37 +133,113 @@ function changeBackground() {
 
         nav ul li a {
             text-decoration: none;
-            color: #f4c79d;
+            color: #ffffff;
         }
-
-
-
-        .services, .about, .contact {
-            padding: 20px;
+        .services{
+            position: relative;
             margin: 20px 0;
-        }
-        .service {
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            scroll-behavior: smooth;
+            align-items: center;
+            overflow: scroll;
             margin: 20px;
-            margin-bottom: 20px;
+            /* border: 1px solid #f4c79d82; */
+            border-radius: 20px;
+        }
+        .contact {
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            scroll-behavior: smooth;
+            align-items: center;
+            line-height: 150%;
+            margin: 20px;
+            /* border: 1px solid #f4c79d82; */
+            border-radius: 20px;
+        }
+        .about{
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            line-height: 150%;
+            scroll-behavior: smooth;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-items: center;
+            margin: 20px;
+            /* border: 1px solid #f4c79d82; */
+            border-radius: 20px;
+        }
+        #services-shell
+        {
+            margin: 0;
+            padding: 0px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            border-radius: 10px;
+            overflow: hidden;
+            align-items: center;
+            margin: 20px;
+            /* border: 1px solid #f4c79d82; */
+            border-radius: 20px;
+            width: 100%;
+        }
+        .services h2 {
+            text-align: center;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .service {
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* border-right: 1px solid #f4c79d; */
+            overflow: hidden;
+            line-height: 150%;
+            border-right:2px solid #f4c79d;
+            width: 360px;
+            color: white;
+            min-width: 360px;
+            height: 300px;
+            border-radius: 0%;
+            color: #000000;
+            padding: 25px;
+            transition: all .5s ease-in-out;
+            /* box-shadow: 2px 2px 15px #f4c79d; */
             
         }
         .service img {
             max-width: 100%;
             height: auto;
+            display: none;
+            width: auto;
+            height: auto;
+            margin-bottom: 10px;
         }
         .nav-button {
             padding: 10px 20px;
-            color: #f4c79d;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
             border: 2px solid #373e48;
 
+        }
+
+        #services::-webkit-scrollbar
+        {
+            visibility: hidden;
         }
 
         .cta-button,
@@ -149,11 +257,11 @@ function changeBackground() {
         .hero {
             height: 100vh;
             display: flex;
+            margin-top: 100px;
             text-align: center;
             flex-direction: column;
             justify-content: space-around;
             padding: 100px 0px;
-            padding-top: 0px;
             background-color: #33333389;
             background-image: url("hero_3.jpg"); 
             background-position: center;
@@ -168,54 +276,16 @@ function changeBackground() {
         {
             padding: 10px;
             border-radius: 10px;
-            background-color: #373e48;
+            background-color: #e9760b;
             color: #f4c79d;
             font-weight: 600;
+            word-wrap: normal;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-shadow: 1px 1px 15px 1px  #f4c79d;
         }
-
-        
-        .services {
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-            /* border: 1px solid #f4c79d82; */
-            background-color: #f4c79d0c;
-            border-radius: 20px;
-            box-shadow: 5px 5px 30px #f4c79d59;
-        }
-
-        .services h2 {
-            text-align: center;
-            display: block;
-            margin-bottom: 30px;
-        }
-
-        .service {
-            text-align: center;
-            margin-bottom: 30px;
-            max-width: 600px;
-            padding: 20px;
-            font-family: "Source sans pro", sans-serif;
-            padding-left: 10%;
-            padding-right: 10%;
-            border: 2px solid #231717;
-        }
-
-        .service img {
-            display: none;
-            width: auto;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        
         .about {
             padding: 50px 20px;
-            background-color: #f0f0f0;
+            background-color: #fff;
         }
 
         .about h2 {
@@ -233,6 +303,30 @@ function changeBackground() {
         }
 
         
+        .logo
+        {
+            background-color: #ffffff;
+            color: #e9760b;
+            border: 5px solid #e9760b;
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: 800;
+            font-family: cets;
+            font-size: 50px;
+        }
+
+        .connector 
+        {
+            display: block;
+            top: 200px;
+            left: 0px;
+            width: 50%;
+            min-height: 100px;
+            border-right: 1px solid #e9760b48;
+            
+
+        }
+        
         footer {
             background-color: #333;
             color: #f4c79d;
@@ -249,6 +343,28 @@ function changeBackground() {
             color: #f4c79d;
         }
 
+        .title 
+        {
+            display: block;
+            text-align: center;
+            padding: 15px;
+        }
+        .arrow 
+        {
+            position: absolute;
+            background-color: #e9760b;
+            color: white;
+            font-weight: 600;
+            padding: 4px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #right
+        {
+            right: 6px;
+        }
         
         @media (max-width: 768px) {
             
@@ -256,11 +372,12 @@ function changeBackground() {
     </style>
 </head>
 
-<body onload="typeWriter();changeBackground()"> 
+<body onload="typeWriter();changeBackground();auto_scroll()"> 
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="cets.jpg" height="40px" alt="C.E.T.S Logo">
+            C.E.T.S
+            <!-- <img src="cets.jpg" height="40px" alt="C.E.T.S Logo"> -->
         </div>
         <nav>
             <ul>
@@ -284,64 +401,80 @@ function changeBackground() {
         <div><a href="#services" class="cta-button">Explore Our Services</a></div>
     </section>
 
+
+<br><br><br>
+    <div class="connector"></div>
+
     <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
+    <h2 class="title">Our Services</h2> 
+    <div id="services-shell">
+        <div id="left" class="arrow" onclick="slide_left();">&LeftArrow;</div>
+        <section id="services" class="services">
         
-        <div class="service">
-            <img src="hero_3.jpg" alt="Primary School Programs">
-            <h3>Primary School Programs</h3>
-            <p>Engaging programs designed to inspire young minds and foster a love for learning.</p>
-        </div>
         
-        <div class="service">
-            <img src="hero_1.jpg" alt="Training Programs">
-            <h3>Comprehensive Training Programs</h3>
-            <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
-        </div>
-        
-        <div class="service">
-            <img src="hero_1.jpg" alt="Professional Development Workshops">
-            <h3>Professional Development Workshops</h3>
-            <p>We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries. These workshops cover topics such as leadership development, communication skills, and project management, among others.</p>
-        </div>
-        
-        <div class="service">
-            <img src="hero_2.jpg" alt="Consultation Services">
-            <h3>Consultation Services</h3>
-            <p>We provide consultation services to organizations seeking guidance on educational and training initiatives. This may include needs assessment, curriculum development, program evaluation, and strategic planning to help organizations optimize their learning and development efforts.</p>
-        </div>
-        
-        <div class="service">
-            <img src="hero_3.jpg" alt="International Education Programs">
-            <h3>International Education Programs</h3>
-            <p>We offer international education programs that provide students with opportunities for global learning experiences. These programs may include study abroad opportunities, cultural immersion programs, and international exchange initiatives.</p>
-        </div>
-        
-        <div class="service">
-            <img src="tutoring.jpg" alt="Tutoring Services">
-            <h3>Tutoring and Academic Support</h3>
-            <p>We offer personalized tutoring and academic support services to students of all ages and academic levels. This includes assistance with homework, exam preparation, study skills development, and academic coaching to help students achieve their academic goals.</p>
-        </div>
-        
-        <div class="service">
-            <img src="online-learning.jpg" alt="Online Learning">
-            <h3>Online Learning Platforms</h3>
-            <p>We provide access to online learning platforms and resources, allowing individuals to engage in flexible and convenient learning experiences. These platforms may include interactive courses, virtual classrooms, and multimedia resources designed to enhance the learning process.</p>
-        </div>
-        
-    </section>
+            <div class="service">
+                <img width="70px" src="hero_3.jpg" alt="Primary School Programs">
+                <h3>Primary School Programs</h3> <br>
+                <p>Engaging programs designed to inspire young minds and foster a love for learning.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="hero_1.jpg" alt="Training Programs">
+                <h3>Comprehensive Training Programs</h3> <br>
+                <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="hero_1.jpg" alt="Professional Development Workshops">
+                <h3>Professional Development Workshops</h3> <br>
+                <p>We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries. These workshops cover topics such as leadership development, communication skills, and project management, among others.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="hero_2.jpg" alt="Consultation Services">
+                <h3>Consultation Services</h3> <br>
+                <p>We provide consultation services to organizations seeking guidance on educational and training initiatives. This may include needs assessment, curriculum development, program evaluation, and strategic planning to help organizations optimize their learning and development efforts.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="hero_3.jpg" alt="International Education Programs">
+                <h3>International Education Programs</h3> <br>
+                <p>We offer international education programs that provide students with opportunities for global learning experiences. These programs may include study abroad opportunities, cultural immersion programs, and international exchange initiatives.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="tutoring.jpg" alt="Tutoring Services">
+                <h3>Tutoring and Academic Support</h3> <br>
+                <p>We offer personalized tutoring and academic support services to students of all ages and academic levels. This includes assistance with homework, exam preparation, study skills development, and academic coaching to help students achieve their academic goals.</p>
+            </div>
+            
+            <div class="service">
+                <img width="70px" src="online-learning.jpg" alt="Online Learning">
+                <h3>Online Learning Platforms</h3> <br>
+                <p>We provide access to online learning platforms and resources, allowing individuals to engage in flexible and convenient learning experiences. These platforms may include interactive courses, virtual classrooms, and multimedia resources designed to enhance the learning process.</p>
+            </div>
+            
+        </section>
+        <div id="right" class="arrow" onclick="slide_right();">&RightArrow;</div>
+    </div>
+    <div style="display: block;text-align: center;"><a href="services.html" class="cta-button">More Services</a></div> <br><br>
+    <div class="connector"></div>
+    <h2 class="title">About Us</h2>
     <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>Collaborative Education and Training Services is dedicated to enhancing educational and training
-            opportunities for professionals and organizations around the globe.</p>
-        <a href="#contact" class="cta-button">Learn More</a>
+        <p>Collaborative Education and Training Services (C.E.T.S.) is dedicated to enhancing educational and training opportunities for professionals and organizations worldwide. With a focus on custom learning experiences, we empower individuals and teams to achieve their full potential.</p>
+        <p>At C.E.T.S., we believe in the power of collaboration to drive innovation and success. Our experienced team of educators and training professionals work closely with clients to develop engaging and impactful learning solutions tailored to their specific needs.</p>
+        <p>Whether you're looking to upskill your workforce, launch a new training program, or improve existing educational materials, C.E.T.S. is here to help. We are committed to fostering a culture of continuous learning and development, where individuals and organizations can thrive.</p>
+       
     </section>
+
+    <div class="connector"></div>
+
+
+    <h2 class="title">Contact Us</h2>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us to learn more about our services or to discuss your training needs.</p>
+        <p>Get in touch with us to learn more about our services or to discuss your training needs.</p> <br> <br>
         <a href="mailto:info@cets.com" class="cta-button">Email Us</a>
         <!-- Optionally, include a contact form -->
     </section>
@@ -351,13 +484,6 @@ function changeBackground() {
         <div class="copyright">
             <p>&copy; 2024 C.E.T.S All rights reserved.</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
         <div class="social-icons">
             <!-- Include social media icons -->
         </div>
