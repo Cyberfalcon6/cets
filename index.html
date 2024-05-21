@@ -77,7 +77,26 @@ function auto_scroll()
     }, 7000);
 }
 
+function changeMood()
+{
+    if(window.scrollY>=1800 && window.scrollY<=2200)
+    {
+        document.body.style.backgroundImage = "linear-gradient(-45deg, #100a00, #100000)";
+        document.body.style.color = "white";
+    }
+    else if(window.scrollY<1800)
+    {
+        document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+        document.body.style.color = "black";
+    }
+    else 
+    {
+        document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+        document.body.style.color = "black";
+    }
+}
 
+window.onscroll(changeMood());
     </script>
     <style>
         
@@ -108,6 +127,7 @@ function auto_scroll()
         
         body {
             font-family: Arial, sans-serif;
+            transition: all .5s ease-in-out;
             background-image: linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d);
         }
         
@@ -341,7 +361,7 @@ function auto_scroll()
             left: 0px;
             width: 50%;
             min-height: 100px;
-            border-right: 1px solid #e9760b48;
+            border-right: 1px solid #e9760b28;
             
 
         }
@@ -360,6 +380,11 @@ function auto_scroll()
 
         footer nav ul li a {
             color: #ffe2c6;
+        }
+
+        .titl 
+        {
+            color: #e9760b;
         }
 
         .title 
@@ -391,10 +416,43 @@ function auto_scroll()
             display: flex;
             justify-content: space-around;
             padding: 10px;
+            margin-top: 7rem;
             align-items: center;
             line-height: 200%;
         }
+
+        .illustration .description 
+        {
+            padding: 30px;
+        }
+        .band 
+        {
+            font-weight: bolder;
+            color: #dce6ff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            padding: 90px;
+            overflow: visible;
+            background-color: #23171798;
+            /* border: 1px solid #e9760b; */
+            /* transform: rotate(30deg); */
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+            align-self: center;
+            width: 100%;
+            height: 300px;
+            z-index: -1;
+
+        }
         
+        .band p 
+        {
+            position: relative;
+            /* transform: rotate(-30deg); */
+        }
         @media (max-width: 768px) {
 
             nav 
@@ -430,7 +488,7 @@ function auto_scroll()
     </style>
 </head>
 
-<body onload="typeWriter();changeBackground();auto_scroll()"> 
+<body onload="typeWriter();changeBackground();auto_scroll()" onscroll="changeMood()"> 
     <!-- Header Section -->
     <header>
         <div class="logo">
@@ -530,7 +588,29 @@ function auto_scroll()
         <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
         </div>
     </div>
+    <div class="connector"></div>
 
+    <div class="band">
+        <p> <div class="titl">OUR MISSION IS</div> <br> <br> To develop, transform and empower personnel through education and training.</p>
+    </div>
+    <div class="illustration">
+        <!-- <i class="fas fa-chalkboard-teacher"></i> -->
+        <div class="description">
+            <h3>OUR AIMS</h3> <br>
+        <p>
+            <ul>
+                <li> To remove barriers to education, training and development of workforce</li>
+            <li> To improve personnel work skills</li>
+            <li> To provide affordable and quality training opportunities.</li>
+            <li> To prepare individuals and groups to become lifelong learners.</li>
+            <li> To guide individuals through a process of obtaining relevant qualifications.</li>
+            </ul></p>
+        </div>
+        <img width="500px" src="aim.svg" alt="Training Programs">
+        
+    </div>
+
+    <div class="connector"></div>
 
     <h2 class="title">About Us</h2>
     <section id="about" class="about">
