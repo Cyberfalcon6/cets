@@ -453,6 +453,30 @@ window.onscroll(changeMood());
             position: relative;
             /* transform: rotate(-30deg); */
         }
+
+        .numbering 
+        {
+            background-color: #e9760b;
+            color: white;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 35px;
+            height: 70px;
+            margin: 10px;
+            padding: 0px;
+            text-align: center;
+            font-weight: 600;
+            font-size: large;
+            height: auto;
+            border: 1px solid #192136;
+            border-radius: 50%;
+        }
+
+        .description ul 
+        {
+            list-style: none;
+        }
         @media (max-width: 768px) {
 
             nav 
@@ -599,11 +623,11 @@ window.onscroll(changeMood());
             <h3>OUR AIMS</h3> <br>
         <p>
             <ul>
-                <li> To remove barriers to education, training and development of workforce</li>
-            <li> To improve personnel work skills</li>
-            <li> To provide affordable and quality training opportunities.</li>
-            <li> To prepare individuals and groups to become lifelong learners.</li>
-            <li> To guide individuals through a process of obtaining relevant qualifications.</li>
+            <li> <div class="numbering">1</div> To remove barriers to education, training and development of workforce</li>
+            <li> <div class="numbering">2</div> To improve personnel work skills</li>
+            <li> <div class="numbering">3</div> To provide affordable and quality training opportunities.</li>
+            <li> <div class="numbering">4</div> To prepare individuals and groups to become lifelong learners.</li>
+            <li> <div class="numbering">5</div> To guide individuals through a process of obtaining relevant qualifications.</li>
             </ul></p>
         </div>
         <img width="500px" src="aim.svg" alt="Training Programs">
