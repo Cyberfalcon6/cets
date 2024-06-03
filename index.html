@@ -77,24 +77,24 @@ function auto_scroll()
     }, 7000);
 }
 
-function changeMood()
-{
-    if(window.scrollY>=1800 && window.scrollY<=2200)
-    {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, #100a00, #100000)";
-        document.body.style.color = "white";
-    }
-    else if(window.scrollY<1800)
-    {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
-        document.body.style.color = "black";
-    }
-    else 
-    {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
-        document.body.style.color = "black";
-    }
-}
+// function changeMood()
+// {
+//     if(window.scrollY>=1800 && window.scrollY<=2200)
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #100a00, #100000)";
+//         document.body.style.color = "white";
+//     }
+//     else if(window.scrollY<1800)
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+//         document.body.style.color = "black";
+//     }
+//     else 
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+//         document.body.style.color = "black";
+//     }
+// }
 
 window.onscroll(changeMood());
     </script>
