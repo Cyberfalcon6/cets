@@ -74,7 +74,7 @@ function auto_scroll()
         }
         scrolLeft = document.getElementById("services").scrollLeft
 
-    }, 7000);
+    }, 11000);
 }
 
 // function changeMood()
@@ -215,7 +215,8 @@ window.onscroll(changeMood());
             padding: 10px;
             display: flex;
             width: 100%;
-            flex-direction: row;
+            flex-direction: column;
+            justify-content: space-around;
             line-height: 150%;
             scroll-behavior: smooth;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -440,7 +441,7 @@ window.onscroll(changeMood());
         .band 
         {
             font-weight: bolder;
-            color: #ffe2c6;
+            color: black;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 30px;
             display: flex;
@@ -448,7 +449,6 @@ window.onscroll(changeMood());
             padding: 10px;
             text-align: center;
             overflow: visible;
-            background-color: #725235;
             align-self: center;
             z-index: -1;
 
