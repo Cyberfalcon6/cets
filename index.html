@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
+
+    function expand()
+        {
+            this.addClassList("expanded");
+            alert(this);
+
+        }
+    const service = document.getElementsbyClassName("service");
+    for(let i = 0;i<service.length;i++)
+        {
+            services[i].addEventListener("click", expand); 
+        }
     let speed = 30;
     function typeWriter() {
     let rolesArray = ["< Customized Learning Experience >","< Comprehensive Training Programs >","< Professional Development Workshops >","< Consultation Services >","< International Education Programs >","< Tutoring and Academic Support >","< Online Learning Platforms >"]; // Split the text by comma and store in an array
