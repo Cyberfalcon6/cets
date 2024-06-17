@@ -73,44 +73,44 @@ function slide_right()
 function s1()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s1").innerHTML;
 
     }
 function s2()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s2").innerHTML;
 
     }
 function s3()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s3").innerHTML;
 
     }
 function s4()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s4").innerHTML;
 
     }
 function s5()
     {
 
          document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s5").innerHTML;
 
     }
 function s6()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s6").innerHTML;
 
     }
 function s7()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<div class='close' onclick='close()'> Close </div>";
+        document.getElementById("service-space").innerHTML = "<div class='close' onclick='close()'> Close </div>"+document.getElementById("s7").innerHTML;
 
     }
 
@@ -232,6 +232,8 @@ function auto_scroll()
             right: 3px;
             background-color: red;
             padding: 2px;
+            width: 50px;
+            height: 50px;
             border-radius: 8px;
             color: white;
         }
@@ -465,11 +467,11 @@ function auto_scroll()
                 self-align: center;
                 width: 70%;
                 height: 95%;
+                max-width: 450px
                 border-radius: 20px;
                 background-color: #ffe2ff;
                 flex-direction: column;
                 padding: 15px;
-                justify-content: space-around;
             }
         footer {
             background-color: #333;
