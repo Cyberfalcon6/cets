@@ -19,7 +19,6 @@
     function typeWriter() {
     let rolesArray = ["< Customized Learning Experience >","< Comprehensive Training Programs >","< Professional Development Workshops >","< Consultation Services >","< International Education Programs >","< Tutoring and Academic Support >","< Online Learning Platforms >"]; // Split the text by comma and store in an array
     let i = 0;
-
     function typeRole(role) {
         let j = 0;
         let roleInterval = setInterval(function() {
@@ -219,6 +218,21 @@ function auto_scroll()
         nav ul li {
             display: inline;
             margin-right: 20px;
+        }
+
+        .event-container 
+        {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+        }
+        event h3 
+        {
+            background-color: #e9f999;
+            border-radius: 25px;
+            box-shadow: 2px 2px 2px wheat;
+            padding: 4px;
         }
 
         nav ul li a {
@@ -756,6 +770,7 @@ function auto_scroll()
         </div>
     </section>
 
+        <div class="connector"></div>
 
     <section class="events" id="events">
         <h2 class="title">Coming Events</h2>
