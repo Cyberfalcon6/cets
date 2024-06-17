@@ -44,6 +44,11 @@
         typeRole(rolesArray[i]); 
     }
 }
+
+function close()
+    {
+        document.getElementById("service-space-container").style = "display: none";
+    }
 function changeBackground() {
     let images = ["hero_1.jpg", "hero_2.jpg","hero_3.jpg","hero_4.jpg","hero_5.jpg","hero_6.jpg"];
     let i = 0;
@@ -68,44 +73,44 @@ function slide_right()
 function s1()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s2()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s3()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s4()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s5()
     {
 
          document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s6()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 function s7()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<div class='close' onclick='close()'> Close </div>";
 
     }
 
@@ -220,6 +225,17 @@ function auto_scroll()
             margin-right: 20px;
         }
 
+        .close 
+        {
+            position: relative;
+            top: 3px;
+            right: 3px;
+            background-color: red;
+            padding: 2px;
+            border-radius: 8px;
+            color: white;
+        }
+
         .event-container 
         {
             width: 100%;
@@ -231,7 +247,6 @@ function auto_scroll()
         .event 
         {
             border: 1px solid wheat;
-            padding: 5px;
         }
 
         nav ul li a {
@@ -547,11 +562,7 @@ function auto_scroll()
         {
             font-size: 25px;
         }
-        .event h3
-        {
-            font-weight: 450;
-
-        }
+        
         .band 
         {
             font-weight: bolder;
@@ -811,19 +822,19 @@ function auto_scroll()
         <h2 class="title">Coming Events</h2>
         <div class="event-container">
             <div class="event">
-                <div class="event-heading"><div class="date"><div class="day">25</div> July 2024</div>
+                <div class="event-heading"><div class="date"><div class="day">25<sup>th</sup></div> July 2024</div>
                 <h3>Web Development Workshop</h3></div>
                 <p>Location: Online</p>
                 <p>Join our online workshop to learn the latest in web development technologies.</p>
             </div>
             <div class="event">
-               <div class="event-heading"> <div class="date"><div class="day">15</div> August 2024</div>
+               <div class="event-heading"> <div class="date"><div class="day">15<sup>th</sup></div> August 2024</div>
                 <h3>International Education Fair</h3></div>
                 <p>Location: New York City</p>
                 <p>Meet representatives from top universities around the world and explore international education opportunities.</p>
             </div>
             <div class="event">
-               <div class="event-heading"> <div class="date"><div class="day">10</div> September 2024</div>
+               <div class="event-heading"> <div class="date"><div class="day">10<sup>th</sup></div> September 2024</div>
                 <h3>Leadership Training Seminar</h3></div>
                 <p>Location: London</p>
                 <p>Enhance your leadership skills with our comprehensive training seminar.</p>
