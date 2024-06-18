@@ -71,47 +71,47 @@ function slide_right()
 function s1()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s2()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s3()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s4()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s5()
     {
 
          document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s6()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
 function s7()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<button class='btn btn-danger' onclick='close()'> Close </button>";
+        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
 
     }
-function close()
+function hide_service_space()
     {
         alert("Hi");
         // document.getElementById("service-space-container").style = "display: none";
@@ -718,7 +718,7 @@ function auto_scroll()
     </style>
 </head>
 
-<body onload="typeWriter();changeBackground();auto_scroll();close()" onscroll="changeMood()"> 
+<body onload="typeWriter();changeBackground();auto_scroll();hide_service_space()" onscroll="changeMood()"> 
     <!-- Header Section -->
     <header>
         <div class="logo">
@@ -886,7 +886,7 @@ function auto_scroll()
             <!-- Here I will include Social Media Icons -->
         </div>
     </footer>
-    <div onclick="close()" id="service-space-container"><div id="service-space">Test 1</div></div>
+    <div onclick="hide_service_space()" id="service-space-container"><div id="service-space">Test 1</div></div>
 </body>
 
 </html>
