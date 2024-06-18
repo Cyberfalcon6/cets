@@ -1,17 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme" content="#e9760b05">
     <link rel="icon" type="image/x-icon" href="cets logo small.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>C.E.T.S - Collaborative Education and Training Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Gallery - C.E.T.S</title>
-    <style>
+    <script>
+    const service = document.getElementsByClassName("service");
+    for(let i = 0;i<service.length;i++)
+        {
+            service[i].addEventListener("click", expand); 
+        }
+    let speed = 30;
+    function typeWriter() {
+    let rolesArray = ["< Customized Learning Experience >","< Comprehensive Training Programs >","< Professional Development Workshops >","< Consultation Services >","< International Education Programs >","< Tutoring and Academic Support >","< Online Learning Platforms >"]; // Split the text by comma and store in an array
+    let i = 0;
+    function typeRole(role) { 
+        let j = 0;
+        let roleInterval = setInterval(function() {
+            if (j < role.length) {
+                document.getElementById("roles").innerHTML += role.charAt(j);
+                j++;
+            } else {
+                clearInterval(roleInterval); 
+                setTimeout(function() {
+                    i++; 
+                    if (i < rolesArray.length) {
+                        setTimeout(function() {
+                            document.getElementById("roles").innerHTML = ''; 
+                            typeRole(rolesArray[i]); 
+                        }, 6000); 
+                    }
+                }, speed); 
+            }
+        }, speed);
+    }
 
-       * {
+    if (i < rolesArray.length) {
+        typeRole(rolesArray[i]); 
+    }
+}
+
+
+function changeBackground() {
+    let images = ["hero_1.jpg", "hero_2.jpg","hero_3.jpg","hero_4.jpg","hero_5.jpg","hero_6.jpg"];
+    let i = 0;
+    const bg = setInterval(() => {
+        document.getElementById("hero").style.backgroundImage = "url('" + images[i] + "')";
+        i = (i + 1) % images.length;
+        if (i === 0) {
+            clearInterval(bg);
+        }
+    }, 8000);
+}
+
+function slide_left()
+{
+    document.getElementById("services").scrollLeft -= 375;
+}
+function slide_right()
+{
+    document.getElementById("services").scrollLeft += 375;
+}
+
+function s1()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s2()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s3()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s4()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s5()
+    {
+
+         document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s6()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function s7()
+    {
+        document.getElementById("service-space-container").style.display = "flex";
+        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+
+    }
+function hide_service_space()
+    {
+        document.getElementById("service-space-container").style = "display: none";
+    }
+function auto_scroll()
+{
+    let scrolLeft = 1;
+    setInterval(() =>
+    {
+        slide_right();
+        if(scrolLeft==document.getElementById("services").scrollLeft)
+        {
+            document.getElementById("services").scrollLeft = 0;
+
+        }
+        scrolLeft = document.getElementById("services").scrollLeft
+
+    }, 11000);
+}
+
+// function changeMood()
+// {
+//     if(window.scrollY>=1800 && window.scrollY<=2200)
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #100a00, #100000)";
+//         document.body.style.color = "white";
+//     }
+//     else if(window.scrollY<1800)
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+//         document.body.style.color = "black";
+//     }
+//     else 
+//     {
+//         document.body.style.backgroundImage = "linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d)";
+//         document.body.style.color = "black";
+//     }
+// }
+    </script>
+    <style>
+        
+        * {
             margin: 0;
             padding: 0;
             background: transparent;
@@ -85,41 +226,264 @@
             margin-right: 20px;
         }
 
+        .close 
+        {
+            position: relative;
+            bottom: 3px;
+            right: 3px;
+            display: block;
+            background-color: red;
+            padding: 2px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+        }
 
-        .logo img {
-            height: 40px;
+        .event-container 
+        {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .event 
+        {
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #e9760b;
+            background-color: #e9760b4d;
+            padding: 0px;
+            width: 30%;
+            min-width: 150px;
+            margin: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .services{
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            scroll-behavior: smooth;
+            align-items: center;
+            overflow: scroll;
+            margin: 20px;
+            /* border: 1px solid #ffff82; */
+            border-radius: 20px;
+        }
+        .contact {
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            scroll-behavior: smooth;
+            align-items: center;
+            line-height: 150%;
+            margin: 20px;
+            /* border: 1px solid #ffff82; */
+            border-radius: 20px;
+        }
+        .about{
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 150%;
+            scroll-behavior: smooth;
+            font-family: roboto, Verdana, Geneva, Tahoma, sans-serif;
+            align-items: center;
+            margin: 20px;
+            /* border: 1px solid #ffff82; */
+            border-radius: 20px;
+        }
+        #services-shell
+        {
+            margin: 0;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            align-items: center;
+            margin: 20px;
+            /* border: 1px solid #ffff82; */
+            border-radius: 20px;
+            width: 100%;
+        }
+        .services h2 {
+            text-align: center;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .service {
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow: hidden;
+            overflow-y: scroll;
+            line-height: 150%;
+            cursor: pointer;
+            border-right:2px solid #ffe2c6;
+            width: 360px;
+            color: white;
+            min-width: 360px;
+            height: 300px;
+            border-radius: 0%;
+            color: #000000;
+            padding: 25px;
+            transition: all .3s ease-in-out;
+            /* box-shadow: 2px 2px 15px #ffe2c6; */
+            
+        }
+        .service::-webkit-scrollbar 
+        {
+            display: none;
+        }
+        .service img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+            width: auto;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+            border: 2px solid #373e48;
+
+        }
+
+        #services::-webkit-scrollbar
+        {
+            visibility: hidden;
+        }
+
+        .cta-button,
+        .nav-button:hover {
+            padding: 10px 20px;
+            background-color: #e9760b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 2px solid #373e48;
+        }
+
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            margin-top: 100px;
+            text-align: center;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 100px 0px;
+            background-color: #33333389;
+            background-image: url("hero_3.jpg"); 
+            background-position: center;
+            background-blend-mode: multiply;
+            color: #ffe2c6;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all 3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+
+        #roles 
+        {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #192136;
+            color: #ffe2c6;
+            font-weight: 600;
+            word-wrap: normal;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 1px 1px 15px 1px  #ffe2c6;
+        }
+        .about {
+            padding: 50px 20px;
+            background: transparent;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 30px;
+        }
+
+        
+        .logo img
+        {
             border: 5px solid #e9760b;
             border-radius: 10px;
         }
 
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding-top: 100px; /* Adjust as needed */
-        }
-
-        .gallery-item {
-            margin: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
+        .connector 
+        {
             display: block;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            top: 200px;
+            left: 0px;
+            width: 50%;
+            min-height: 100px;
+            border-right: 1px solid #e9760b28;
         }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-
-       
-         footer {
+        #service-space-container
+            {
+                position: fixed;
+                top: 0%;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                width: 100%;
+                z-index: 1000;
+                height: 100%;
+                border-radius: 10px;
+                background: transparent;
+            }
+        #service-space 
+            {
+                position: fixed;
+                top: 0%;
+                display: flex;
+                align-self: center;
+                width: 70%;
+                height: 95%;
+                max-width: 450px;
+                border-radius: 20px;
+                background-color: #ffc691;
+                flex-direction: column;
+                padding: 15px;
+            }
+        footer {
             background-color: #333;
             color: #ffe2c6;
             padding: 20px;
@@ -134,49 +498,165 @@
         footer nav ul li a {
             color: #ffe2c6;
         }
+
+        
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay-content {
+    text-align: center;
+}
+
+.gallery-item .overlay-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.gallery-item .overlay-content p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+            .about 
+            {
+                flex-direction: column;
+                line-height: 180%;
+            }
+            #roles 
+            {
+                position: relative;
+                top: 20px;
+                line-break: strict;
+                width: fit-content;
+                align-self: center;
+            }
+            #welcome 
+            {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            .illustration
+            {
+                flex-direction: column;
+            }
+            #service-space 
+            {
+                position: fixed;
+                top: 0%;
+                display: flex;
+                align-self: center;
+                width: 100%;
+                height: 95%;
+                max-width: 450px;
+                border-radius: 20px;
+                flex-direction: column;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
-<body>
+
+<body onload="typeWriter();changeBackground();auto_scroll();"> 
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="cets logo small.png" alt="C.E.T.S Logo">
+            <img src="cets logo small.png" height="40px" alt="C.E.T.S Logo">
         </div>
         <nav>
-            <ul>
-                <li><a class="nav-button" href="index.html">Home</a></li>
-                <li><a class="nav-button" href="#services">Services</a></li>
-                <li><a class="nav-button" href="#about">About Us</a></li>
-                <li><a class="nav-button" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="cta-button">Contact Us</a>
+        <ul>
+            <li><a class="nav-button" href="#services">Services</a></li>
+            <li><a class="nav-button" href="#about">About Us</a></li>
+            <li><a class="nav-button" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="#contact" class="cta-button">Contact Us</a>
     </header>
-
     <!-- Gallery Section -->
-    <section class="gallery-container">
-        <div class="gallery-item">
-            <img src="gallery/image1.jpg" alt="Image 1">
+<section id="gallery" class="gallery">
+    <div class="gallery-item">
+        <img src="gallery_image_1.jpg" alt="Gallery Image 1">
+        <div class="overlay">
+            <div class="overlay-content">
+                <h3>Image Title 1</h3>
+                <p>Description of the image.</p>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="gallery/image2.jpg" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+        <img src="gallery_image_2.jpg" alt="Gallery Image 2">
+        <div class="overlay">
+            <div class="overlay-content">
+                <h3>Image Title 2</h3>
+                <p>Description of the image.</p>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="gallery/image3.jpg" alt="Image 3">
-        </div>
-        <!-- Add more gallery items as needed -->
-    </section>
+    </div>
+    <!--I'll Add more gallery items as needed -->
+</section>
 
     <!-- Footer Section -->
     <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="copyright">
+            <p>&copy; 2024 C.E.T.S All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+            <!-- Here I will include Social Media Icons -->
+        </div>
     </footer>
+    <div id="service-space-container"><div id="service-space"></div></div>
 </body>
+
 </html>
