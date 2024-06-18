@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme" content="#e9760b05">
+    <link rel="icon" type="image/x-icon" href="cets logo small.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gallery - C.E.T.S</title>
+    <style>
+        /* Your custom styles for gallery page can go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(-45deg, #e9760b05, #e9680b16, #e9760b15, #e9760b4d);
+            color: #000000;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fdf5f0;
+            color: #2a2a2a;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+            border: 5px solid #e9760b;
+            border-radius: 10px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 100px; /* Adjust as needed */
+        }
+
+        .gallery-item {
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffe2c6;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="cets logo small.png" alt="C.E.T.S Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a class="nav-button" href="index.html">Home</a></li>
+                <li><a class="nav-button" href="#services">Services</a></li>
+                <li><a class="nav-button" href="#about">About Us</a></li>
+                <li><a class="nav-button" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-container">
+        <div class="gallery-item">
+            <img src="gallery/image1.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/image2.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="gallery/image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add more gallery items as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
