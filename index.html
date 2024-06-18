@@ -75,44 +75,44 @@ function slide_right()
 function s1()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s1").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s2()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s2").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s3()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s3").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s4()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s4").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s5()
     {
 
          document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s5").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s6()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s6").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 function s7()
     {
         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = "<div class='btn btn-danger' Onclick='close()'> Close </div>"+document.getElementById("s7").innerHTML;
+        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<div class='btn btn-danger' Onclick='close()'> Close </div>";
 
     }
 
@@ -230,8 +230,9 @@ function auto_scroll()
         .close 
         {
             position: relative;
-            top: 3px;
+            bottom: 3px;
             right: 3px;
+            display: block;
             background-color: red;
             padding: 2px;
             width: 50px;
