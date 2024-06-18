@@ -20,7 +20,7 @@
     function typeWriter() {
     let rolesArray = ["< Customized Learning Experience >","< Comprehensive Training Programs >","< Professional Development Workshops >","< Consultation Services >","< International Education Programs >","< Tutoring and Academic Support >","< Online Learning Platforms >"]; // Split the text by comma and store in an array
     let i = 0;
-    function typeRole(role) {
+    function typeRole(role) { 
         let j = 0;
         let roleInterval = setInterval(function() {
             if (j < role.length) {
@@ -562,6 +562,12 @@ function auto_scroll()
             background-position: center;
             background-size: cover;
             height: 50%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            background-blend-mode: multiply;
+            background-color: linear-gradient(90deg, #000000, transparent);
+            justify-content: flex-end;
             min-height: 200px;
         }
         .date 
