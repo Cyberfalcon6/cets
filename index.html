@@ -45,8 +45,6 @@
         typeRole(rolesArray[i]); 
     }
 }
-
-
 function changeBackground() {
     let images = ["hero_1.jpg", "hero_2.jpg","hero_3.jpg","hero_4.jpg","hero_5.jpg","hero_6.jpg"];
     let i = 0;
@@ -68,53 +66,60 @@ function slide_right()
     document.getElementById("services").scrollLeft += 375;
 }
 
-function s1()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s1").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s1() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s1").innerHTML;
+    let fullDescription = document.getElementById("s1").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s2()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s2").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s2() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s2").innerHTML;
+    let fullDescription = document.getElementById("s2").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s3()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s3").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s3() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s3").innerHTML;
+    let fullDescription = document.getElementById("s3").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s4()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s4").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s4() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s4").innerHTML;
+    let fullDescription = document.getElementById("s4").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s5()
-    {
+function s5() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s5").innerHTML;
+    let fullDescription = document.getElementById("s5").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-         document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s5").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s6() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s6").innerHTML;
+    let fullDescription = document.getElementById("s6").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s6()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s6").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function s7() {
+    document.getElementById("service-space-container").style.display = "flex";
+    let serviceContent = document.getElementById("s7").innerHTML;
+    let fullDescription = document.getElementById("s7").querySelector(".full-description").outerHTML;
+    document.getElementById("service-space").innerHTML = serviceContent.replace("</p>", "</p>" + fullDescription) + "<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+}
 
-    }
-function s7()
-    {
-        document.getElementById("service-space-container").style.display = "flex";
-        document.getElementById("service-space").innerHTML = document.getElementById("s7").innerHTML+"<button class='btn btn-danger' onclick='hide_service_space()'> Close </button>";
+function hide_service_space() {
+    document.getElementById("service-space-container").style.display = "none";
+    document.getElementById("service-space").innerHTML = "";
+}
 
-    }
-function hide_service_space()
-    {
-        document.getElementById("service-space-container").style = "display: none";
-    }
 function auto_scroll()
 {
     let scrolLeft = 1;
@@ -787,38 +792,46 @@ function auto_scroll()
         
             <div class="service" id="s1" onclick="s1()">
                 <h3>Primary School Programs</h3> <br>
-                <p>Engaging programs designed to inspire young minds and foster a love for learning.</p>
+                <p class="partial-description">Engaging programs designed to inspire young minds and foster a love for learning.</p>
+                <p class="full-description" style="display:none;">Our primary school programs are designed to inspire young minds and foster a love for learning. Through interactive and hands-on activities, we aim to engage students in a creative and stimulating educational environment. Our programs include the Music and Dance Project, the Farm Project, and the Art Project, each tailored to enrich the educational experience of primary school students and encourage their creativity and curiosity.</p>
             </div>
             
             <div class="service" id="s2" onclick="s2()">
                 <h3>Comprehensive Training Programs</h3> <br>
-                <p>We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals.</p>
+                <p class="partial-description">We offer comprehensive training programs tailored to the specific needs and objectives of clients.</p>
+                <p class="full-description" style="display:none;">We offer comprehensive training programs tailored to the specific needs and objectives of clients. These programs cover a wide range of topics and skill areas, ensuring that learners receive relevant and practical training to meet their goals. Our training programs are designed to be flexible and customizable, addressing the unique challenges and requirements of each client. Whether it's upskilling your workforce, launching a new training initiative, or enhancing existing training materials, our programs are built to deliver impactful and measurable results.</p>
             </div>
             
             <div class="service" id="s3" onclick="s3()">
                 <h3>Professional Development Workshops</h3> <br>
-                <p>We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries. These workshops cover topics such as leadership development, communication skills, and project management, among others.</p>
+                <p class="partial-description">We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries.</p>
+                <p class="full-description" style="display:none;">We conduct professional development workshops aimed at enhancing the skills and competencies of individuals in various industries. These workshops cover topics such as leadership development, communication skills, project management, and more. Our workshops are designed to provide practical knowledge and tools that participants can immediately apply in their professional lives. By focusing on real-world applications and interactive learning methods, we ensure that our workshops are engaging, informative, and highly effective.</p>
             </div>
             
             <div class="service" id="s4" onclick="s4()">
                 <h3>Consultation Services</h3> <br>
-                <p>We provide consultation services to organizations seeking guidance on educational and training initiatives. This may include needs assessment, curriculum development, program evaluation, and strategic planning to help organizations optimize their learning and development efforts.</p>
+                <p class="partial-description">We provide consultation services to organizations seeking guidance on educational and training initiatives.</p>
+                <p class="full-description" style="display:none;">We provide consultation services to organizations seeking guidance on educational and training initiatives. Our consultation services include needs assessment, curriculum development, program evaluation, and strategic planning. We work closely with organizations to understand their specific goals and challenges, offering expert advice and tailored solutions to optimize their learning and development efforts. Our aim is to help organizations create effective and sustainable educational programs that drive success and growth.</p>
             </div>
             
             <div class="service" id="s5" onclick="s5()">
                 <h3>International Education Programs</h3> <br>
-                <p>We offer international education programs that provide students with opportunities for global learning experiences. These programs may include study abroad opportunities, cultural immersion programs, and international exchange initiatives.</p>
+                <p class="partial-description">We offer international education programs that provide students with opportunities for global learning experiences.</p>
+                <p class="full-description" style="display:none;">We offer international education programs that provide students with opportunities for global learning experiences. These programs may include study abroad opportunities, cultural immersion programs, and international exchange initiatives. Our international education programs are designed to foster a global mindset, enhance cultural awareness, and provide students with a unique and enriching learning experience. By participating in our programs, students gain valuable skills and perspectives that prepare them for success in an increasingly interconnected world.</p>
             </div>
             
             <div class="service" id="s6" onclick="s6()">
                 <h3>Tutoring and Academic Support</h3> <br>
-                <p>We offer personalized tutoring and academic support services to students of all ages and academic levels. This includes assistance with homework, exam preparation, study skills development, and academic coaching to help students achieve their academic goals.</p>
+                <p class="partial-description">We offer personalized tutoring and academic support services to students of all ages and academic levels.</p>
+                <p class="full-description" style="display:none;">We offer personalized tutoring and academic support services to students of all ages and academic levels. This includes assistance with homework, exam preparation, study skills development, and academic coaching. Our tutoring services are designed to address the individual needs of each student, helping them build confidence, improve their grades, and achieve their academic goals. With a team of experienced tutors, we provide one-on-one support that makes a meaningful difference in students' educational journeys.</p>
             </div>
             
             <div class="service" id="s7" onclick="s7()">
                 <h3>Online Learning Platforms</h3> <br>
-                <p>We provide access to online learning platforms and resources, allowing individuals to engage in flexible and convenient learning experiences. These platforms may include interactive courses, virtual classrooms, and multimedia resources designed to enhance the learning process.</p>
+                <p class="partial-description">We provide access to online learning platforms and resources, allowing individuals to engage in flexible and convenient learning experiences.</p>
+                <p class="full-description" style="display:none;">We provide access to online learning platforms and resources, allowing individuals to engage in flexible and convenient learning experiences. These platforms may include interactive courses, virtual classrooms, and multimedia resources designed to enhance the learning process. Our online learning solutions are designed to meet the diverse needs of learners, offering a range of options that make education accessible and engaging. Whether you're looking to expand your knowledge, acquire new skills, or pursue a formal qualification, our online learning platforms provide the tools and resources you need to succeed.</p>
             </div>
+            
             
         </section>
         <div id="right" class="arrow" onclick="slide_right();">&RightArrow;</div>
