@@ -757,6 +757,12 @@ function auto_scroll()
                 padding: 15px;
             }
         }
+	header li::before 
+	    {
+		    content: '✔️';
+		    margin-left: auto;
+	    }
+	
     </style>
 </head>
 
@@ -878,7 +884,7 @@ function auto_scroll()
             <h3>OUR AIMS</h3> <br>
         <p>
             <ul>
-            <li> <div class="numbering">1</div> To remove barriers to education, training and development of workforce</li>
+            <li> ::before To remove barriers to education, training and development of workforce</li>
             <li> <div class="numbering">2</div> To improve individuals work skills</li>
             <li> <div class="numbering">3</div> To provide affordable and quality training opportunities.</li>
             <li> <div class="numbering">4</div> To prepare individuals and groups to become lifelong learners.</li>
