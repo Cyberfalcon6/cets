@@ -209,12 +209,14 @@ function auto_scroll()
 
 	    .fade-in {
     opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Slightly lower than its original position */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transition effect */
+    color: #ffe2c6;
+    transform: translateY(30px); /* Slightly lower than its original position */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transition effect */
 }
 
 .fade-in.visible {
     opacity: 1; /* Fully visible */
+    color: #333333;
     transform: translateY(0); /* Original position */
 }
 
@@ -268,7 +270,7 @@ function auto_scroll()
 
         header .nav-button 
         {
-            color: black;
+            color: #333333;
         }
 
         .gradient {
@@ -560,7 +562,7 @@ function auto_scroll()
 
         .titl 
         {
-            color: black;
+            color: #333333;
         }
 
         .title 
@@ -665,7 +667,7 @@ function auto_scroll()
         .band 
         {
             font-weight: bolder;
-            color: black;
+            color: #333333;
             font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             display: flex;
             flex-direction: row;
