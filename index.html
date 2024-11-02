@@ -27,7 +27,7 @@
             if (j < role.length) {
                 document.getElementById("roles").innerHTML += role.charAt(j);
                 j++;
-            } else {
+            } else { 
                 clearInterval(roleInterval); 
                 setTimeout(function() {
                     i++; 
@@ -190,7 +190,7 @@ function auto_scroll()
         }
         
         body {
-            font-family: Poppins, verdana;
+            font-family: Poppins, 'Montserrat';
             padding: 0px;
             margin: 0px;
             transition: all .3s ease-in-out;
@@ -422,7 +422,7 @@ function auto_scroll()
             color: #ffe2c6;
             font-weight: 600;
             word-wrap: normal;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: poppins;
             box-shadow: 1px 1px 15px 1px  #ffe2c6;
         }
         .about {
@@ -582,7 +582,7 @@ function auto_scroll()
 	cursor: pointer;
 	padding: 19px;
 	padding-bottom: 0px;
-	font-family: verdana;
+	font-family: poppins, 'Montserrat';
 }
         .date 
         {
@@ -606,7 +606,7 @@ function auto_scroll()
         {
             font-weight: bolder;
             color: black;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             display: flex;
             flex-direction: row;
             padding: 10px;
@@ -671,7 +671,7 @@ function auto_scroll()
         {
             font-weight: bolder;
             color: black;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             display: flex;
             flex-direction: column;
             padding: 10px;
@@ -786,8 +786,8 @@ function auto_scroll()
     <section class="hero" id="hero">
         
         <div id="showcase">
-            <h1 style="color: #ffe2c6;font-size: 50px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to Collaborative Education and Training Services</h1>
-       <br><br> <p id="welcome" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <span id="roles"></span> </p>
+            <h1 style="color: #ffe2c6;font-size: 50px;font-family: 'Montserrat', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Welcome to Collaborative Education and Training Services</h1>
+       <br><br> <p id="welcome" style="font-family: 'Montserrat', Geneva, Tahoma, sans-serif;"> Empowering individuals and organizations through <span id="roles"></span> </p>
         
         </div>
         <div><a href="#services" class="cta-button">Explore Our Services</a></div>
